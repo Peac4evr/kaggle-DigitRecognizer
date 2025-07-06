@@ -37,15 +37,15 @@ for index, (images,labels) in enumerate(test_loader):
         labels = labels.cpu().numpy()
         pred = pred.cpu().numpy()
 
-        for idx in range(images.shape[0]):
-                im_data = images[idx]
-                im_data = im_data.transpose(1,2,0)
-                im_label = labels[idx]
-                im_pred = pred[idx]
-                print("预测值为{}".format(im_pred))
-                print("真实值为{}".format(im_label))
-                cv2.imshow("cur_image",im_data)
-                cv2.waitKey(0)
+        # for idx in range(images.shape[0]):
+        #         im_data = images[idx]
+        #         im_data = im_data.transpose(1,2,0)
+        #         im_label = labels[idx]
+        #         im_pred = pred[idx]
+        #         print("预测值为{}".format(im_pred))
+        #         print("真实值为{}".format(im_label))
+        #         cv2.imshow("cur_image",im_data)
+        #         cv2.waitKey(0)
 
 print("loss为{}，准确率是{}".format(loss_test,rightValue/len(test_data)))
 
