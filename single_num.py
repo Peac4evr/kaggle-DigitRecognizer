@@ -10,7 +10,7 @@ def preprocess_image(image_path):
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     # 调整图像大小为28x28
     image = cv2.resize(image, (28, 28))
-    # 反转颜色（因为MNIST数据集是白底黑字）
+    # 反转颜色（因为MNIST数据集是黑底白字）
     image = 255 - image
     # 二值化处理
     _, image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
